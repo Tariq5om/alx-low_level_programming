@@ -7,7 +7,7 @@
 */
 int main(void)
 {
-	char arr[] = "_putchar\n";
+	char arr[] = "_putchar";
 	int i = 0;
 
 	while (i < 10)
@@ -15,5 +15,6 @@ int main(void)
 		_putchar(arr[i]);
 		i++;
 	}
+	_putchar('\n');
 	return (0);
 }
