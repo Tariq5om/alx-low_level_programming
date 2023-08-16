@@ -10,7 +10,7 @@ int main(void)
 	char arr[] = "_putchar";
 	int i = 0;
 
-	while (i < 10)
+	while (i < 8)
 	{
 		_putchar(arr[i]);
 		i++;
