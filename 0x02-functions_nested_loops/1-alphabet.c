@@ -5,6 +5,7 @@
  *
  * Return: Always 0.
  */
+/*print_alphabet is a function that print alphabet*/
 void print_alphabet(void)
 {
 	int i;
