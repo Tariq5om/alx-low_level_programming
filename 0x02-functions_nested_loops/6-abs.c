@@ -6,7 +6,7 @@
 * @int: is the num
 * Return: n which it's the absolute value
 */
-int _abs(int)
+int _abs(int n)
 {
 	int n;
 
