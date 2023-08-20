@@ -8,12 +8,8 @@
 */
 int _islower(int c)
 {
-	int n;
-
-	/*_islower - is a function*/
-	n = _islower(c);
-	if (n == 0)
-		return (0);
-	else
+	if (c >= 97 && c <= 122)
 		return (1);
+	else
+		return (0);
 }
