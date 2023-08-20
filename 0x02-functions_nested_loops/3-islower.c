@@ -11,7 +11,7 @@ int _islower(int c)
 	int n;
 
 	/*_islower - is a function*/
-	n = _islower();
+	n = _islower('n');
 	if (n == 0)
 		return (0);
 	else
