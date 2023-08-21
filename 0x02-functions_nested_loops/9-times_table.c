@@ -24,7 +24,6 @@ void times_table(void)
 			_putchar(' ');
 			}
 		}
-		if (!(n == 9 && m == 10))
-		_putchar('\n');
+    		_putchar('\n');
 	}
 }
