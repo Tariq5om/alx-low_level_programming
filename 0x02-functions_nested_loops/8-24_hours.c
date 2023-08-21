@@ -8,10 +8,12 @@ void jack_bauer(void)
 {
 	int f, t, w, o;
 
-	for (f = 0; f < 3; f++)
+	for (f = 0; f < 10; f++)
 	{
 		for (t = 0; t < 10; t++)
 		{
+			if (f == 2 && t == 4)
+				break;
 			for (w = 0; w < 6; w++)
 			{
 				for (o = 0; o < 10; o++)
@@ -31,5 +33,7 @@ void jack_bauer(void)
 		o = 0;
 		w = 0;
 		t = 0;
+		if (f == 2 && t == 4)
+			break;
 	}
 }
