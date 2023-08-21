@@ -6,6 +6,7 @@
 include all header files
 */
 
+int add(int, int);
 void jack_bauer(void);
 void times_table(void);
 int _abs(int);
