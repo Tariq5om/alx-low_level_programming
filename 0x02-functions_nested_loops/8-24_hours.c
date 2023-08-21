@@ -30,10 +30,10 @@ void jack_bauer(void)
 			o = 0;
 			w = 0;
 		}
+		if (f == 2 && t == 4)
+                        break;
 		o = 0;
 		w = 0;
 		t = 0;
-		if (f == 2 && t == 4)
-			break;
 	}
 }
