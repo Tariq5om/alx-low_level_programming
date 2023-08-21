@@ -16,12 +16,12 @@ void jack_bauer(void)
 			{
 				for (o = 0; o < 10; o++)
 				{
-					putchar(f + '0');
-					putchar(t + '0');
-					putchar(':');
-					putchar(w + '0');
-					putchar(o + '0');
-					putchar('\n');
+					_putchar(f + '0');
+					_putchar(t + '0');
+					_putchar(':');
+					_putchar(w + '0');
+					_putchar(o + '0');
+					_putchar('\n');
 				}
 				o = 0;
 			}
