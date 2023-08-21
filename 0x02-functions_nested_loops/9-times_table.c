@@ -14,17 +14,17 @@ void times_table(void)
 		{
 			p = n * m;
 			if ((p / 10) != 0)
-			putchar((p / 10) + '0');
+			_putchar((p / 10) + '0');
 			else
-			putchar(' ');
-			putchar((p % 10) + '0');
+			_putchar(' ');
+			_putchar((p % 10) + '0');
 			if (m != 9)
 			{
-			putchar(',');
-			putchar(' ');
+			_putchar(',');
+			_putchar(' ');
 			}
 		}
 		if (!(n == 9 && m == 10))
-		putchar('\n');
+		_putchar('\n');
 	}
 }
