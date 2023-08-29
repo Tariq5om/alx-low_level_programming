@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_numbers - is a funtuon that print number from 0 to 9
+ * print_most_numbers - is a funtuon that print number from 0 to 9
  * Return: void
  */
 void print_most_numbers(void)
