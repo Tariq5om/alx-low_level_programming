@@ -6,30 +6,15 @@
  */
 void more_numbers(void)
 {
-	int l1, l2, num, rev, dig;
+	int s, t;
 
-	for (l1 = 1; (l1 >= 1 && l1 <= 10); l1++)
+	for (s = 0; s < 10; s++)/*this for lines*/
 	{
-		for (l2 = 0; (l2 >= 0 && l2 <= 14); l2++)
+		for (t = 0; t <= 14; t++)/*this for numbers*/
 		{
-			if (l2 == 0)
-				_putchar(l2 + '0');
-			else
-			{
-				num = l2;
-				while (num > 0)
-				{
-					dig = num % 10;
-					rev = rev * 10 + dig;
-					num = num / 10;
-				}
-				while (rev > 0)
-				{
-					dig = rev % 10;
-					_putchar(dig + '0');
-					rev = rev / 10;
-				}
-			}
+			if (t >= 10)
+				_putchar(t / 10 + '0');
+			_putchar(t % 10 + '0');
 		}
 		_putchar('\n');
 	}
