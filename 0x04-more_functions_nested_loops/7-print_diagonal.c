@@ -1,8 +1,9 @@
 #include "main.h"
+
 /**
- * print_diagonal - is a function.
+ * print_diagonal - it is a function.
  *
- * @n: the numbers od diagonals
+ * @n: the numbers of diagonals
  */
 void print_diagonal(int n)
 {
@@ -22,5 +23,4 @@ void print_diagonal(int n)
 			_putchar('\n');
 		}
 	}
-	return (0);
 }
