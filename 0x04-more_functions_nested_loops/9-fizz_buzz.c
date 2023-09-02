@@ -11,7 +11,9 @@ int main(void)
 
 	for (l = 1; l <= 100; l++)
 	{
-		if (l % 3 == 0 || l % 5 == 0)
+		if (l == 100)
+			printf("Buzz");
+		else if (l % 3 == 0 || l % 5 == 0)
 		{
 			if (l % 3 == 0 && l % 5 != 0)
 				printf("Fizz ");
@@ -24,7 +26,7 @@ int main(void)
 		{
 			printf("%d ", l);
 		}
-	}
+}
 	putchar('\n');
 	return (0);
 }
