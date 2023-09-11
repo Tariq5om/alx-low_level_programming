@@ -1,0 +1,16 @@
+include "main.h"
+
+/**
+ * _puts - print an array
+ *
+ * @s: is a pointer to first elemnt
+ * Return:the length of an array
+ */
+void _puts(char *str)
+{
+	int l;
+
+	for(l = 0; (*(str + l)) >= '\0'; l++)
+		putchar((*(str + l)));
+	putchar('\n');
+}
