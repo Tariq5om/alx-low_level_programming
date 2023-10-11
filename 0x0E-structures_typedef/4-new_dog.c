@@ -2,12 +2,12 @@
 #include <stdio.h>
 
 /**
- * new_dog - this sdfd
+ * new_dog - flgh;oih;gairg
  *
- * @name: ldkf
- * @age: lsrhf
- * @owner: sjflds
- * Return: wejfwe
+ * @name: oubypvgr[afmocpe[]]
+ * @age: 9bwuvn[aupgn]
+ * @owner: yvb54wogsvo
+ * Return:  h o8t8vngrc
 */
 dog_t *new_dog(char *name, float age, char *owner)
 {
@@ -22,5 +22,5 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	p->owner = owner;
 	p->age = age;
-	return (p);
+	return (p);/*ihf;osdhfjdsl*/
 }
