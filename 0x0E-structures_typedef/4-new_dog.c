@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * new_dog - flgh;oih;gairg
+ * new_dog - flghoihgairg
  *
  * @name: oubypvgr[afmocpe[]]
  * @age: 9bwuvn[aupgn]
@@ -22,5 +22,5 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	p->owner = owner;
 	p->age = age;
-	return (p);/*ihf;osdhfjdsl*/
+	return (p);/*ihfosdhfjdsl*/
 }

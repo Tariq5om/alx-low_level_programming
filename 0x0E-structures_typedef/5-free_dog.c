@@ -4,7 +4,7 @@
  * free_dog - jbflfsfidskfdf
  *
  * @d: sfjslbrlgldsf
- * Return:ldfjg;fjg;dfj
+ * Return:hkd
 */
 void free_dog(dog_t *d)
 {

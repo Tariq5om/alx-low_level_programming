@@ -1,10 +1,10 @@
 #include "dog.h"
 
 /**
- * init_dog - lerhgierh;h;erhg
+ * init_dog - lerhgier
  *
  * @d:ihg;srjl
- * @name: ihgsisjgd
+ * @name:knfhfgjdsgf
  * @age:reigje'pjs
  * @owner:gjtsjgj;
 */
