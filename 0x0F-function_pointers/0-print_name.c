@@ -5,7 +5,7 @@
  *
  * @name: The name
 */
-void print(char *name)
+void print_name_as_is(char *name)
 {
 	int i, j;
 
@@ -23,6 +23,6 @@ void print(char *name)
 */
 void print_name(char *name, void (*f)(char *))
 {
-	f = &print;
+	/*f = &print;*/
 	f(name);
 }
