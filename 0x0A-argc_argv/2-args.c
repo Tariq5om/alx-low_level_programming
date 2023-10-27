@@ -2,20 +2,20 @@
 #include "main.h"
 
 /**
- * main - Entry point
+ * main - Print all arguments
  *
- * @argc: the count
- * @argv: the array
- * Return: 0 Success
+ * @argc: the number of arguments
+ * @argv: the array of arguments
+ * Return: 0 (Success)
  */
 int main(int argc, char *argv[])
 {
-	int i;
+	int n;
 
-	i = 0;
-	for (i = 0; i < argc; i++)
+	n = 0;
+	for (n = 0; n != argc; n++)/*print each argument with newline*/
 	{
-		printf("%s\n", argv[i]);
+		printf("%s\n", argv[n]);
 	}
 	return (0);
 }

@@ -1,20 +1,21 @@
+#include <stdio.h>
 #include "main.h"
+#include <ctype.h>
 #include <stdlib.h>
 
 /**
- * main - Entry point
+ * main - Print the result of addition
  *
- * @argc: the count of arguments
- * @argv: the string
- * Return: The 1 when fails, 0 when Success
-*/
-int main(int argc, char *argv[])
+ * @argc: numbers of digits
+ * @argv: array of digits
+ * Return: 0 Success, 1 if it faults
+ */
+int main(int argc, char **argv)
 {
-	long add, dig, i;
-	char *endptr;
+	int i, j, sum;
+	char *pn;
 
-	add = 0;
-	endptr = NULL;
+	sum = 0;/*To make sure it will work*/
 	if (argc == 1)
 	{
 		printf("0\n");
@@ -22,15 +23,17 @@ int main(int argc, char *argv[])
 	}
 	for (i = 1; i < argc; i++)
 	{
-		dig = strtol(argv[i], &endptr, 10);
-		if (endptr == argv[i] || *endptr != '\0')
+		pn = argv[i];
+		for (j = 0; pn[j] != '\0'; j++)
 		{
-			printf("Error\n");
-			return (1);
+			if (isdigit(pn[j]) == 0)
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-		else
-			add = add + dig;
+		sum += atoi(pn);
 	}
-	printf("%ld\n", add);
+	printf("%d\n", sum);
 	return (0);
 }
