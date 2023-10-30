@@ -2,24 +2,22 @@
 #include <stdlib.h>
 
 /**
- * alloc_grid - return a p to 2 dim
+ * alloc_grid - return a pointer to 2 dimensional
  *
- * @width: the width of array
- * @height: the height
- * Return: the 2 dim
+ * @width: the width
+ * @height: the height of tge array
+ * Return: 2 dimensional
 */
 int **alloc_grid(int width, int height)
 {
 	int **p, i, j;
 
-	if (width <= 0 || height <= 0)
+	p = malloc(sizeof(int *) * height);/*The stick*/
+	if (width <= 0 || height <= 0 || p == NULL)
 		return (NULL);
-	p = malloc(sizeof(int *) * height);
-	if (p == NULL)
-		return (NULL);
-	for (i = 0; i < height; i++)
+	for (i = 0; i < height; i++)/*The rest*/
 	{
-		p[i] = malloc(sizeof(int) * width);
+		p[i] = malloc(sizeof(**p) * width);
 		if (p[i] == NULL)
 		{
 			for (j = 0; j < i; j++)
@@ -29,15 +27,8 @@ int **alloc_grid(int width, int height)
 			free(p);
 			return (NULL);
 		}
-	}
-	for (i = 0, j = 0; i < height; j++)
-	{
-		*(*(p + i) + j) = 0;
-		if (j == width - 1)
-		{
-			j = 0;
-			i++;
-		}
+		for (j = 0; j < width; j++)
+			p[i][j] = 0;
 	}
 	return (p);
 }
