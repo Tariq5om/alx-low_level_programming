@@ -3,18 +3,18 @@
 #include <stdlib.h>
 
 /**
- * free_grid - free the last 2-d array
+ * free_grid - free 2 dimensional
  *
- * @grid: the array
- * @height: the height of array
+ * @grid: Array
+ * @height: the height of 2 dimensional array
 */
 void free_grid(int **grid, int height)
 {
-	int j;
+	int i;
 
-	for (j = 0; j < height; j++)
+	for (i = 0; i < height; i++)/*First free the rset*/
 	{
-		free(grid[j]);
+		free(grid[i]);/*Then the stick*/
 	}
 		free(grid);
 }
