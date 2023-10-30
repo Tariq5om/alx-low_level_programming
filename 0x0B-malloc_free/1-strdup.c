@@ -24,12 +24,11 @@ int _strlen(char *s)
  */
 char *_strdup(char *str)
 {
-	int l, k;
+	int l;
 	char *g;/*the string*/
 
 	if (str == NULL)
 		return (NULL);
-	k = _strlen(str);
 	g = malloc(sizeof(*str));
 	if (g == NULL)
 		return (NULL);
