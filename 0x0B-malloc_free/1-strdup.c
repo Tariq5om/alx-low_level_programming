@@ -24,16 +24,16 @@ int _strlen(char *s)
  */
 char *_strdup(char *str)
 {
-	int l;
+	int l, k;
 	char *g;/*the string*/
 
 	if (str == NULL)
 		return (NULL);
-	g = malloc(sizeof(*str));
+	k = _strlen(str);
+	g = malloc(sizeof(char) * (k + 1));
 	if (g == NULL)
 		return (NULL);
-	for (l = 0; str[l] != '\0'; l++)
+	for (l = 0; l != k; l++)
 		g[l] = str[l];
-	g[l] = '\0';
 	return (g);
 }
