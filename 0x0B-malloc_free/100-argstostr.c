@@ -14,7 +14,7 @@ int strlena(int ac, char **s)
 	int i, j, n;
 
 	n = 0;
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		for (j = 0; s[i][j] != '\0'; j++)
 			n++;
@@ -38,7 +38,7 @@ char *argstostr(int ac, char **av)
 	s = malloc(sizeof(char) * strlena(ac, av));
 	if (s == NULL || av == NULL || ac == 0)
 		return (NULL);
-	for (i = 1; i < ac; i++, n++)
+	for (i = 0; i < ac; i++, n++)
 	{
 		for (j = 0; av[i][j] != '\0'; j++, n++)
 			s[n] = av[i][j];
