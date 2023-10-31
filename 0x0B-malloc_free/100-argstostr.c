@@ -35,7 +35,7 @@ char *argstostr(int ac, char **av)
 	char *s;
 
 	n = 0;
-	s = malloc(sizeof(char) * strlena(ac, av));
+	s = malloc(sizeof(char) * strlena(ac, av) + 1);
 	if (s == NULL || av == NULL || ac == 0)
 		return (NULL);
 	for (i = 0; i < ac; i++, n++)
