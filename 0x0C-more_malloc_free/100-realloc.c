@@ -1,44 +1,44 @@
 #include "main.h"
 
 /**
- * _realloc - reallocate the memory block
+ * _realloc - like realloc function
  *
- * @ptr:the previously block
- * @old_size:the old
- * @new_size:the new
- * Return: the new block
+ * @ptr: the last space
+ * @old_size: old size of last block
+ * @new_size: new size of new block
+ * Return: new space
 */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	void *p;
-	unsigned int i;
+	void *n;/*The new block*/
+	unsigned int i;/*Loopcounter*/
 
-	if (new_size == 0 && ptr != NULL)
+	if (new_size == 0 && ptr != NULL)/*If it's not*/
 	{
 		free(ptr);
 		return (NULL);
 	}
-	p = malloc(new_size);
-	if (p == NULL)
+	n = malloc(new_size);
+	if (n == NULL)
 		return (NULL);
 	if (ptr != NULL)
 	{
 		if (new_size > old_size)
 		{
 			for (i = 0; i < old_size; i++)
-				*((char *)p + i) = *((char *)ptr + i);
+				*((char *)n + i) = *((char *)ptr + i);
 		}
 		if (new_size < old_size)
 		{
 			for (i = 0; i < new_size; i++)
-				*((char *)p + i) = *((char *)ptr + i);
+				*((char *)n + i) = *((char *)ptr + i);
 		}
 		if (new_size == old_size)
 		{
-			free(p);
+			free(n);
 			return (ptr);
 		}
-		free(ptr);
+		free(ptr);/*free the last space*/
 	}
-	return (p);
+	return (n);
 }
