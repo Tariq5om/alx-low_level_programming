@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 /**
- * main - tbfkjd
+ * main - Entry point to try
  *
- * Return: gnlre
+ * Return: 0 Success
 */
 int main(void)
 {
-	printf("%s\n", __FILE__); /*;df;dk*/
+	printf("%s\n", __FILE__); /*print  tge file*/
 	return (0);
 }
