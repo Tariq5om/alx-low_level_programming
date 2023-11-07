@@ -1,16 +1,16 @@
 #include "dog.h"
 
 /**
- * init_dog - uthkkvjhbb
+ * init_dog - Initilize a dog
  *
- * @d:yfdyhvc
- * @name:fhjvvxsduh
- * @age:suivghg
- * @owner:xzartipkvvbj
+ * @d: the dog
+ * @name:name if it
+ * @age: age of it
+ * @owner:gjtsj
 */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	if (d)/*shgcvjgf*/
+	if (d)
 	{
 		d->name = name;
 		d->age = age;
