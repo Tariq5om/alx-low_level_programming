@@ -1,4 +1,21 @@
 #include "main.h"
+
+/**
+ * _strlen - length of the string
+ *
+ * @s: the string
+ * Return: the length
+ */
+unsigned int _strlen(const char *s)
+{
+	unsigned int i;
+
+	if (!s)
+		return (0);
+	for(i = 0; s[i]; i++)
+		;
+	return (i);
+}
 /**
  * create_file - create a file
  *
