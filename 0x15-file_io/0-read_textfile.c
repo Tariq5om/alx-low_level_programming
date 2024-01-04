@@ -1,5 +1,24 @@
 #include "main.h"
-
+/**
+ * _calloc - Allocate memory
+ *
+ * @nmemb: The number of elements
+ * @size: The size of each element
+ * Return: void
+ */
+void *_calloc(unsigned int nmemb, unsigned int size)
+{
+        unsigned int i;
+        unsigned char *s;
+        if (nmemb == 0 || size == 0)
+                return (NULL);
+        s = malloc(nmemb * size);
+        if (s == NULL)
+                return (NULL);
+        for (i = 0; i < nmemb * size; i++)
+                s[i] = 0;
+        return (s);
+}
 /**
  * read_textfile - reads a text file and prints it
  *
@@ -19,7 +38,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	fd = open(filename, O_RDWR);
 	if (fd == -1)
 		return (0);
-	c = calloc(100, sizeof(char));
+	c = _calloc(100, sizeof(char));
 	if (!c)
 	{
 		close(fd);
