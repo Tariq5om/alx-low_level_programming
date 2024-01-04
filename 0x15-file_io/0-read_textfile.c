@@ -39,7 +39,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	fd = open(filename, O_RDWR);
 	if (fd == -1)
 		return (0);
-	c = _calloc(100, sizeof(char));
+	c = _calloc(letters, sizeof(char));
 	if (!c)
 	{
 		close(fd);
