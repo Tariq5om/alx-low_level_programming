@@ -12,7 +12,9 @@ unsigned int _strlen(const char *s)
 
 	if (!s)
 		return (0);
-	for(i = 0; s[i]; i++)
+	if (*s == '\0')
+		return (1);
+	for (i = 0; s[i]; i++)
 		;
 	return (i);
 }
