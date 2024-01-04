@@ -18,6 +18,7 @@ unsigned int _strlen(const char *s)
 		;
 	return (i);
 }
+
 /**
  * create_file - create a file
  *
@@ -35,14 +36,15 @@ int create_file(const char *filename, char *text_content)
 	fd = open(filename, inf);
 	if (fd == -1)
 		return (-1);
-	if (!text_content)
-		text_content = "\0";
-	n = write(fd, text_content, len);
-	i = n;
-	if (n == -1 || i != len)
+	if (text_content)
 	{
-		close(fd);
-		return (-1);
+		n = write(fd, text_content, len);
+		i = n;
+		if (n == -1 || i != len)
+		{
+			close(fd);
+			return (-1);
+		}
 	}
 	if (close(fd) == -1)
 		return (-1);
