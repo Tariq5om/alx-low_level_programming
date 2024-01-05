@@ -29,7 +29,6 @@ unsigned int _strlen(const char *s)
 int create_file(const char *filename, char *text_content)
 {
 	int fd, n;
-	size_t i;
 
 	if (!filename)
 		return (-1);
@@ -39,8 +38,7 @@ int create_file(const char *filename, char *text_content)
 	if (text_content)
 	{
 		n = write(fd, text_content, len);
-		i = n;
-		if (n == -1 || i != len)
+		if (n == -1)
 		{
 			close(fd);
 			return (-1);
